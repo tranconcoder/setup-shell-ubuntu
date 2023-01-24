@@ -130,16 +130,10 @@ CHROME_APP_PATH=$ROOT_PATH/app/google-chrome.deb
 wget -O $CHROME_APP_PATH https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install $CHOME_APP_PATH -y
 
-
 # Visual studio code
 VSCODE_APP_PATH=$ROOT_PATH/app/visual-studio-code.deb
 wget -O $VSCODE_APP_PATH https://az764295.vo.msecnd.net/stable/97dec172d3256f8ca4bfb2143f3f76b503ca0534/code_1.74.3-1673284829_amd64.deb
 sudo apt install $VSCODE_APP_PATH -y
-# sudo apt update
-# sudo apt install software-properties-common apt-transport-https wget -y
-# wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-# sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-# sudo apt install code -y
 
 # VLC media player
 sudo apt isntall vlc -y
