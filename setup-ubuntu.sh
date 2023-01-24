@@ -77,7 +77,7 @@ KORA_ICON_PATH=$ROOT_PATH/theme/kora-icons
 
 sudo apt update
 mkdir -p $KORA_ICON_PATH
-git clone https://github.com/bikass/kora.git $KORA_ICON_PATHH
+git clone https://github.com/bikass/kora.git $KORA_ICON_PATH
 mkdir -p ~/.local/share/icons
 cp -a $KORA_ICON_PATH/kora ~/.local/share/icons
 cp -a $KORA_ICON_PATH/kora-light ~/.local/share/icons
@@ -127,13 +127,13 @@ sudo apt-get install fonts-powerline -y
 # Google chrome
 mkdir -p $ROOT_PATH/app
 CHROME_APP_PATH=$ROOT_PATH/app/google-chrome.deb
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -d $CHROME_APP_PATH
+wget -O $CHROME_APP_PATH https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install $CHOME_APP_PATH -y
 
 
 # Visual studio code
 VSCODE_APP_PATH=$ROOT_PATH/app/visual-studio-code.deb
-wget https://az764295.vo.msecnd.net/stable/97dec172d3256f8ca4bfb2143f3f76b503ca0534/code_1.74.3-1673284829_amd64.deb -d $VSCODE_APP_PATH
+wget -O $VSCODE_APP_PATH https://az764295.vo.msecnd.net/stable/97dec172d3256f8ca4bfb2143f3f76b503ca0534/code_1.74.3-1673284829_amd64.deb
 sudo apt install $VSCODE_APP_PATH -y
 # sudo apt update
 # sudo apt install software-properties-common apt-transport-https wget -y
