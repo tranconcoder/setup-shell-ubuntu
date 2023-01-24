@@ -5,6 +5,20 @@ mkdir -p $ROOT_PATH
 
 #################################################
 # 												#
+# 					FONTS 						#
+# 												#
+#################################################
+
+# cascadia code
+sudo apt install fonts-cascadia-code -y
+
+# cascadia code (nerd font)
+mkdir -p $ROOT_PATH/fonts
+wget -O  $ROOT_PATH/fonts/cascadia-code-nerdfont.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.2/CascadiaCode.zip
+unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
+
+#################################################
+# 												#
 # 					SETUP SYSTEM 				#
 # 												#
 #################################################
@@ -35,23 +49,17 @@ source ~/.bashrc
 nvm list-remote
 echo "run: \"nvm install <version>\" to install nodejs"
 
-
 #################################################
 # 												#
 # 					SETUP STYLES 				#
 # 												#
 #################################################
 
-# install nerd font
-mkdir -p $ROOT_PATH/fonts
-wget -O  $ROOT_PATH/fonts/cascadia-code-nerdfont.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.2/CascadiaCode.zip
-unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
 
 # install gnome-tweak, gnome-extension-manager
 sudo apt update
 sudo add-apt-repository universe
-sudo apt install gnome-tweaks
-sudo apt install gnome-shell-extension-manager -y
+sudo apt install gnome-tweaks gnome-shell-extension-manager -y
 
 # install gnome-extension:
 #  + bluetooth quick connect
@@ -105,12 +113,10 @@ nvim --headless +CocCommand clangd.install +qa
 
 # setup for c++
 sudo apt update
-sudo apt install ccls
+sudo apt install ccls -y
 
 # setup for airline font
-mkdir -p $ROOT_PATH/fonts
-git clone https://github.com/powerline/fonts.git $ROOT_PATH/fonts/powerline-fonts
-$ROOT_PATH/fonts/powerline-fonts/install.sh
+sudo apt-get install fonts-powerline -y
 
 #################################################
 # 												#
@@ -123,5 +129,10 @@ sudo apt update
 sudo apt install software-properties-common apt-transport-https wget -y
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt install code
+sudo apt install code -y
 
+# VLC media player
+sudo apt isntall vlc -y
+
+# Shotwell
+sudo apt install shotwell -y
