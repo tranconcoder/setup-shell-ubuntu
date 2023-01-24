@@ -27,7 +27,7 @@ unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
 sudo apt -y install $(check-language-support -l fr)
 
 # install unzip package
-sudo apt-get install unzip
+sudo apt-get install unzip -y
 
 # github and gh auth login
 sudo apt update
@@ -58,7 +58,7 @@ echo "run: \"nvm install <version>\" to install nodejs"
 
 # install gnome-tweak, gnome-extension-manager
 sudo apt update
-sudo add-apt-repository universe
+sudo add-apt-repository universe -y
 sudo apt install gnome-tweaks gnome-shell-extension-manager -y
 
 # install gnome-extension:
@@ -92,7 +92,7 @@ cp -a $KORA_ICON_PATH/kora-pgrey ~/.local/share/icons
 
 sudo apt update
 sudo apt install neovim python3-neovim software-properties-common -y
-sudo apt-get install python3-dev python3-pip
+sudo apt-get install python3-dev python3-pip -y
 pip install py2neo
 npm install -g yarn
 
