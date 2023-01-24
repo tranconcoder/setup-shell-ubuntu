@@ -1,10 +1,12 @@
+ROOT_PATH="$HOME/Downloads/setup"
+
 # create folder to setup
-mkdir -p ~/Downloads/setup
+mkdir -p $ROOT_PATH
 
 # install nerd font
-mkdir -p ~/Downloads/setup/fonts
-wget -O ~/Downloads/setup/fonts/cascadia-code-nerdfont.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.2/CascadiaCode.zip
-unzip ~/Downloads/setup/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
+mkdir -p $ROOT_PATH/fonts
+wget -O  $ROOT_PATH/fonts/cascadia-code-nerdfont.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.2/CascadiaCode.zip
+unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
 
 # install unzip package
 sudo apt-get install unzip
@@ -29,35 +31,32 @@ source ~/.bashrc
 nvm list-remote
 echo "run: \"nvm install <version>\" to install nodejs"
 
-# install gnome-tweak
+# install gnome-tweak, gnome-extension-manager
 sudo apt update
 sudo add-apt-repository universe
 sudo apt install gnome-tweaks
-
 sudo apt install gnome-shell-extension-manager -y
 
 # install gnome-extension:
- + bluetooth quick connect
- + blur my shell
- + dash to dock
- + dash to dock animation
+#  + bluetooth quick connect
+#  + blur my shell
+#  + dash to dock
+#  + dash to dock animation
  
 # install orchis-theme
-mkdir -p ~/Downloads/setup/theme
-git clone https://github.com/vinceliuice/Orchis-theme.git ~/Downloads/setup/theme/orchis-theme
-~/Downloads/setup/theme/orchis-theme/install.sh
-gnome-tweaks
-
+mkdir -p $ROOT_PATH/theme
+git clone https://github.com/vinceliuice/Orchis-theme.git $ROOT_PATH/theme/orchis-theme
+$ROOT_PATH/theme/orchis-theme/install.sh
 
 # install kora icon
-sudo apt update
-mkdir -p ~/Downloads/setup/theme/kora-icons
-git clone https://github.com/bikass/kora.git ~/Downloads/setup/theme/kora-icons
-mkdir -p ~/.local/share/icons
-cp -a ~/Downloads/setup/theme/kora-icons/kora ~/.local/share/icons
-cp -a ~/Downloads/setup/theme/kora-icons/kora-light ~/.local/share/icons
-cp -a ~/Downloads/setup/theme/kora-icons/kora-light-panel ~/.local/share/icons
-cp -a ~/Downloads/setup/theme/kora-icons/kora-pgrey ~/.local/share/icons
-gnome-tweaks
+KORA_ICON_PATH=$ROOT_PATH/theme/kora-icons
 
+sudo apt update
+mkdir -p $KORA_ICON_PATH
+git clone https://github.com/bikass/kora.git $KORA_ICON_PATHH
+mkdir -p ~/.local/share/icons
+cp -a $KORA_ICON_PATH/kora ~/.local/share/icons
+cp -a $KORA_ICON_PATH/kora-light ~/.local/share/icons
+cp -a $KORA_ICON_PATH/kora-light-panel ~/.local/share/icons
+cp -a $KORA_ICON_PATH/kora-pgrey ~/.local/share/icons
 
