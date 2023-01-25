@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Zalo
+Comment=Web App
+Exec=google-chrome --app=https://chat.zalo.me/ --class=WebApp-Zalo9526 --user-data-dir=/home/tvconss/.local/share/ice/profiles/Zalo9526
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/tvconss/.local/share/ice/icons/Zalo.png
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Zalo9526
+StartupNotify=true
+X-WebApp-URL=https://chat.zalo.me/
+X-WebApp-Isolated=true

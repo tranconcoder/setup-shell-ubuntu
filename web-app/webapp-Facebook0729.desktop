@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Facebook
+Comment=Web App
+Exec=google-chrome --app=https://www.facebook.com/ --class=WebApp-Facebook0729 --user-data-dir=/home/tvconss/.local/share/ice/profiles/Facebook0729 --incognito
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/tvconss/.local/share/ice/icons/Facebook.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Facebook0729
+StartupNotify=true
+X-WebApp-URL=https://www.facebook.com/
+X-WebApp-Isolated=true

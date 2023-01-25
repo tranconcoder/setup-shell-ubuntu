@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Messenger
+Comment=Web App
+Exec=google-chrome --app=https://www.messenger.com/ --class=WebApp-Messenger7089 --user-data-dir=/home/tvconss/.local/share/ice/profiles/Messenger7089
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/tvconss/.local/share/ice/icons/Messenger.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Messenger7089
+StartupNotify=true
+X-WebApp-URL=https://www.messenger.com/
+X-WebApp-Isolated=true

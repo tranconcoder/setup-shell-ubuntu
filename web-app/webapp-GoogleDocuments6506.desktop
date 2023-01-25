@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Documents
+Comment=Web App
+Exec=google-chrome --app=https://www.docs.google.com/document --class=WebApp-GoogleDocuments6506 --user-data-dir=/home/tvconss/.local/share/ice/profiles/GoogleDocuments6506
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=application-msword
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-GoogleDocuments6506
+StartupNotify=true
+X-WebApp-URL=https://www.docs.google.com/document
+X-WebApp-Isolated=true

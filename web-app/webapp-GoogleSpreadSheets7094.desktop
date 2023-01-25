@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Google SpreadSheets
+Comment=Web App
+Exec=google-chrome --app=https://www.docs.google.com/spreadsheets --class=WebApp-GoogleSpreadSheets7094 --user-data-dir=/home/tvconss/.local/share/ice/profiles/GoogleSpreadSheets7094
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=application-msexcel
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-GoogleSpreadSheets7094
+StartupNotify=true
+X-WebApp-URL=https://www.docs.google.com/spreadsheets
+X-WebApp-Isolated=true

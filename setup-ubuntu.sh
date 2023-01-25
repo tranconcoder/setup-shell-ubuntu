@@ -24,7 +24,6 @@ sudo apt install $VSCODE_APP_PATH
 # Setup chrome-web-app
 cp $ROOT_PATH/chrome-web-app/* ~/.local/share/applications
 
-
 # VLC media player
 sudo apt install vlc -y
 
@@ -36,6 +35,13 @@ sudo snap install telegram-desktop
 
 # Libre office
 sudo apt install libreoffice -y
+
+# Web app manager
+WEB_APP_MANAGER_PATH=$ROOT_PATH/app/web-app-manager/web-app-manager.deb
+wget -O $WEB_APP_MANAGER_PATH http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.1.5_all.deb
+sudo apt install $WEB_APP_MANAGER_PATH
+
+cp $ROOT_PATH/web-app/* ~/.local/share/applications
 
 #################################################
 # 												#

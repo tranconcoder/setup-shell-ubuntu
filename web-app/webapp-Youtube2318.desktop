@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Youtube
+Comment=Web App
+Exec=google-chrome --app=https://www.youtube.com/ --class=WebApp-Youtube2318 --user-data-dir=/home/tvconss/.local/share/ice/profiles/Youtube2318
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/tvconss/.local/share/ice/icons/Youtube.png
+Categories=GTK;AudioVideo;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Youtube2318
+StartupNotify=true
+X-WebApp-URL=https://www.youtube.com/
+X-WebApp-Isolated=true
