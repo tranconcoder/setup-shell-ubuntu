@@ -148,4 +148,15 @@ sudo apt install ccls -y
 # setup for airline font
 sudo apt-get install fonts-powerline -y
 
+# install mutter rounded
+MUTTER_ROUNDED_PATH=$ROOT_PATH/app/mutter-rounded
+git clone https://github.com/yilozt/mutter-rounded $MUTTER_ROUNDED_PATH
+$MUTTER_ROUNDED_PATH/ubuntu/package.sh
+sudo dpkg -i libmutter-10-0*.deb mutter-common*.deb
+
+# install mutter rounded setting
+MUTER_ROUNDED_SETTING_PATH=$ROOT_PATH/app/mutter-rounded-setting
+sudo apt install webpack
+git clone https://github.com/yilozt/mutter-rounded-setting $MUTER_ROUNDED_SETTING_PATH
+$MUTER_ROUNDED_SETTING_PATH/install
 
