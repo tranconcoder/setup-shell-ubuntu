@@ -1,4 +1,5 @@
-ROOT_PATH="$HOME/Downloads/setup"
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+ROOT_PATH=$SCRIPT_DIR
 
 # create folder to setup
 mkdir -p $ROOT_PATH
@@ -19,6 +20,9 @@ sudo apt install $CHROME_APP_PATH
 VSCODE_APP_PATH=$ROOT_PATH/app/visual-studio-code.deb
 wget -O $VSCODE_APP_PATH https://az764295.vo.msecnd.net/stable/97dec172d3256f8ca4bfb2143f3f76b503ca0534/code_1.74.3-1673284829_amd64.deb
 sudo apt install $VSCODE_APP_PATH
+
+# Setup chrome-web-app
+cp $ROOT_PATH/chrome-web-app/* ~/.local/share/applications
 
 # VLC media player
 sudo apt install vlc -y
