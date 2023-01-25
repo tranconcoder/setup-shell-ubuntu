@@ -13,3 +13,4 @@ StartupWMClass=WebApp-Youtube2318
 StartupNotify=true
 X-WebApp-URL=https://www.youtube.com/
 X-WebApp-Isolated=true
+

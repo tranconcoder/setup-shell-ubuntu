@@ -13,3 +13,4 @@ StartupWMClass=WebApp-Facebook0729
 StartupNotify=true
 X-WebApp-URL=https://www.facebook.com/
 X-WebApp-Isolated=true
+

@@ -13,3 +13,4 @@ StartupWMClass=WebApp-Zalo9526
 StartupNotify=true
 X-WebApp-URL=https://chat.zalo.me/
 X-WebApp-Isolated=true
+

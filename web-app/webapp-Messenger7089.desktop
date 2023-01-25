@@ -13,3 +13,4 @@ StartupWMClass=WebApp-Messenger7089
 StartupNotify=true
 X-WebApp-URL=https://www.messenger.com/
 X-WebApp-Isolated=true
+

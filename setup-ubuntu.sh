@@ -22,6 +22,7 @@ wget -O $VSCODE_APP_PATH https://az764295.vo.msecnd.net/stable/97dec172d3256f8ca
 sudo apt install $VSCODE_APP_PATH
 
 # Setup chrome-web-app
+mkdir -p ~/.local/share/applications
 cp $ROOT_PATH/chrome-web-app/* ~/.local/share/applications
 
 # VLC media player
@@ -37,11 +38,11 @@ sudo snap install telegram-desktop
 sudo apt install libreoffice -y
 
 # Web app manager
-WEB_APP_MANAGER_PATH=$ROOT_PATH/app/web-app-manager/web-app-manager.deb
+WEB_APP_MANAGER_PATH=$ROOT_PATH/app/web-app-manager.deb
 wget -O $WEB_APP_MANAGER_PATH http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.1.5_all.deb
-sudo apt install $WEB_APP_MANAGER_PATH
+sudo apt install $WEB_APP_MANAGER_PATH -y
 
-cp $ROOT_PATH/web-app/* ~/.local/share/applications
+cp $SCRIPT_DIR/web-app/* ~/.local/share/applications
 
 #################################################
 # 												#
@@ -54,7 +55,7 @@ sudo apt install fonts-cascadia-code -y
 
 # cascadia code (nerd font)
 mkdir -p $ROOT_PATH/fonts
-wget -O  $ROOT_PATH/fonts/cascadia-code-nerdfont.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.2/CascadiaCode.zip
+wget -O $ROOT_PATH/fonts/cascadia-code-nerdfont.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.2/CascadiaCode.zip
 unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
 
 #################################################
@@ -63,8 +64,13 @@ unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
 # 												#
 #################################################
 
-# Setup favorite apps
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'chrome-celnaknmndcdcjcagffhbhciignkeokb-Default.desktop', 'chrome-fmpeogjilmkgcolmjmaebdaebincaebh-Default.desktop', 'chrome-khmlcabibblfpfhmkfpaiblbijoggmaa-Default.desktop', 'libreoffice-writer.desktop', 'chrome-mpnpojknpmmopombnjdcgaaiekajbnjb-Default.desktop', 'chrome-kefjledonklijopmnomlcbpllchaibag-Default.desktop', 'chrome-fhihpiojkbmbpdjeoajapmgkhlnakfjf-Default.desktop', 'chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop', 'code.desktop', 'org.gnome.Terminal.desktop', 'vlc.desktop', 'org.gnome.Settings.desktop']"
+# Setup favorites app icon
+FAVORITES_ICON_PATH=~/.local/share/ice/icons
+mkdir -p $FAVORITES_ICON_PATH
+cp $SCRIPT_DIR/web-app-icon/* $FAVORITES_ICON_PATH
+
+# Setup favorites app
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'webapp-Facebook0729.desktop', 'webapp-Messenger7089.desktop', 'webapp-Zalo9526.desktop', 'telegram-desktop_telegram-desktop.desktop', 'webapp-Youtube2318.desktop', 'code.desktop', 'vlc.desktop', 'shotwell.desktop', 'webapp-GoogleSpreadSheets7094.desktop', 'webapp-GoogleDocuments6506.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Settings.desktop']"
 
 # install vietnamese unikey
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo -y
@@ -149,7 +155,6 @@ npm install -g yarn
 # install neovim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-mkdir -p ~/.config
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/coc
 git clone https://github.com/tranconcoder/neovim.git ~/.config/nvim
