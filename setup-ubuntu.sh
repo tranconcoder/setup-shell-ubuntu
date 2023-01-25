@@ -21,7 +21,7 @@ wget -O $VSCODE_APP_PATH https://az764295.vo.msecnd.net/stable/97dec172d3256f8ca
 sudo apt install $VSCODE_APP_PATH
 
 # VLC media player
-sudo apt install vlc -y
+sudo snap install vlc -y
 
 # Shotwell
 sudo apt install shotwell -y
