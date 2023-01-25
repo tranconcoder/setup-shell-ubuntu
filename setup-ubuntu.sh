@@ -24,11 +24,18 @@ sudo apt install $VSCODE_APP_PATH
 # Setup chrome-web-app
 cp $ROOT_PATH/chrome-web-app/* ~/.local/share/applications
 
+
 # VLC media player
 sudo apt install vlc -y
 
 # Shotwell
 sudo apt install shotwell -y
+
+# Telegram desktop
+sudo snap install telegram-desktop
+
+# Libre office
+sudo apt install libreoffice -y
 
 #################################################
 # 												#
@@ -49,6 +56,9 @@ unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
 # 					SETUP SYSTEM 				#
 # 												#
 #################################################
+
+# Setup favorite apps
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'chrome-celnaknmndcdcjcagffhbhciignkeokb-Default.desktop', 'chrome-fmpeogjilmkgcolmjmaebdaebincaebh-Default.desktop', 'chrome-khmlcabibblfpfhmkfpaiblbijoggmaa-Default.desktop', 'libreoffice-writer.desktop', 'chrome-mpnpojknpmmopombnjdcgaaiekajbnjb-Default.desktop', 'chrome-kefjledonklijopmnomlcbpllchaibag-Default.desktop', 'chrome-fhihpiojkbmbpdjeoajapmgkhlnakfjf-Default.desktop', 'chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop', 'code.desktop', 'org.gnome.Terminal.desktop', 'vlc.desktop', 'org.gnome.Settings.desktop']"
 
 # install vietnamese unikey
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo -y
