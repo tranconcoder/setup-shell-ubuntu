@@ -173,3 +173,9 @@ sudo apt install ccls -y
 # setup for airline font
 sudo apt-get install fonts-powerline -y
 
+# setup for fuzzy finder
+AG_PATH=$ROOT_PATH/package/ag
+mkdir -p $ROOT_PATH/package
+git clone https://github.com/ggreer/the_silver_searcher $AG_PATH
+$AG_PATH/build.sh
+(cd $AG_PATH && sudo make install)
