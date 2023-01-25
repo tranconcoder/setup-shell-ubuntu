@@ -38,11 +38,11 @@ sudo snap install telegram-desktop
 sudo apt install libreoffice -y
 
 # Web app manager
-WEB_APP_MANAGER_PATH=$ROOT_PATH/app/web-app-manager.deb
-wget -O $WEB_APP_MANAGER_PATH http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.1.5_all.deb
-sudo apt install $WEB_APP_MANAGER_PATH -y
-
-cp $SCRIPT_DIR/web-app/* ~/.local/share/applications
+#WEB_APP_MANAGER_PATH=$ROOT_PATH/app/web-app-manager.deb
+#wget -O $WEB_APP_MANAGER_PATH http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.1.5_all.deb
+#sudo apt install $WEB_APP_MANAGER_PATH -y
+#
+#cp $SCRIPT_DIR/web-app/* ~/.local/share/applications
 
 #################################################
 # 												#
@@ -64,10 +64,13 @@ unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
 # 												#
 #################################################
 
+# Setup background
+gsettings set org.gnome.desktop.background picture-uri $SCRIPT_DIR/background/dva-1.jpg
+
 # Setup favorites app icon
-FAVORITES_ICON_PATH=~/.local/share/ice/icons
-mkdir -p $FAVORITES_ICON_PATH
-cp $SCRIPT_DIR/web-app-icon/* $FAVORITES_ICON_PATH
+#FAVORITES_ICON_PATH=~/.local/share/ice/icons
+#mkdir -p $FAVORITES_ICON_PATH
+#cp $SCRIPT_DIR/web-app-icon/* $FAVORITES_ICON_PATH
 
 # Setup favorites app
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'webapp-Facebook0729.desktop', 'webapp-Messenger7089.desktop', 'webapp-Zalo9526.desktop', 'telegram-desktop_telegram-desktop.desktop', 'webapp-Youtube2318.desktop', 'code.desktop', 'vlc.desktop', 'shotwell.desktop', 'webapp-GoogleSpreadSheets7094.desktop', 'webapp-GoogleDocuments6506.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Settings.desktop']"
