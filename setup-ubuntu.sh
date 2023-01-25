@@ -21,7 +21,7 @@ wget -O $VSCODE_APP_PATH https://az764295.vo.msecnd.net/stable/97dec172d3256f8ca
 sudo apt install $VSCODE_APP_PATH
 
 # VLC media player
-sudo snap install vlc -y
+sudo apt install vlc -y
 
 # Shotwell
 sudo apt install shotwell -y
@@ -47,7 +47,14 @@ unzip $ROOT_PATH/fonts/cascadia-code-nerdfont.zip -d ~/.local/share/fonts
 #################################################
 
 # install vietnamese unikey
-sudo apt -y install $(check-language-support -l fr)
+sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo -y
+sudo apt-get update
+sudo apt-get install ibus ibus-bamboo --install-recommends -y
+ibus restart
+
+# set ibus-bamboo to default input sources
+env DCONF_PROFILE=ibus dconf write /desktop/ibus/general/preload-engines "['BambooUs', 'Bamboo']"
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'Bamboo')]"
 
 # install unzip package
 sudo apt-get install unzip -y
