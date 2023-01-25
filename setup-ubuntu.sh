@@ -1,5 +1,5 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-ROOT_PATH=$SCRIPT_DIR
+ROOT_PATH=$SCRIPT_DIR/dest
 
 # create folder to setup
 mkdir -p $ROOT_PATH
