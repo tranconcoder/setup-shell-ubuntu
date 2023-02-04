@@ -178,7 +178,10 @@ sudo apt-get install fonts-powerline -y
 
 # setup for fuzzy finder
 AG_PATH=$ROOT_PATH/package/ag
-mkdir -p $ROOT_PATH/package
+mkdir -p $AG_PATH
 git clone https://github.com/ggreer/the_silver_searcher $AG_PATH
 $AG_PATH/build.sh
 (cd $AG_PATH && sudo make install)
+
+sudo apt-get install ripgrep -y
+
