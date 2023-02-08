@@ -102,11 +102,14 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 (cd ~ && gh auth login)
 
 # nodejs
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-source ~/.bashrc
-nvm list-remote
+(
+cd ~ &&
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh &&
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash &&
+source ~/.bashrc &&
+nvm list-remote &&
 nvm install v18.14.0
+)
 
 #################################################
 # 												#
